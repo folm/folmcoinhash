@@ -1,0 +1,20 @@
+{
+  "name": "folmcoinhash",
+  "version": "1.0.0",
+  "description": "Node.js hash functions for Folmcoin",
+  "main": "folmcoinhash",
+  "license": "MIT",
+  "repository" : { 
+    "type" : "git", 
+    "url" : "https://github.com/folm/folmcoinhash.git"
+  },
+  "dependencies": {
+    "nan": "latest",
+    "bindings": "latest",
+    "node-gyp": "latest"
+  },
+  "scripts": {
+    "test": "node test.js"
+  },
+  "gypfile": true
+}
