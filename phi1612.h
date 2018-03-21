@@ -7,12 +7,13 @@
 #include "sha3/sph_fugue.h"
 #include "sha3/sph_gost.h"
 #include "sha3/sph_echo.h"
+#include "uint256.h"
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-void phi1612_hash(const char* input, char* output);
+uint512_t phi1612_hash(const char* input, char* output);
 
 #ifdef __cplusplus
 }

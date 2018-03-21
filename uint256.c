@@ -543,3 +543,11 @@ bool tostring256(uint256_t *number, uint32_t baseParam, char *out,
     reverseString(out, offset);
     return true;
 }
+uint512_t  trim256() const
+{
+    uint512_t ret;
+    for (unsigned int i = 0; i < uint256::WIDTH; i++) {
+        ret.pn[i] = pn[i];
+    }
+    return ret;
+}

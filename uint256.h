@@ -24,6 +24,8 @@ typedef struct uint128_t { uint64_t elements[2]; } uint128_t;
 
 typedef struct uint256_t { uint128_t elements[2]; } uint256_t;
 
+typedef struct uint512_t { uint256_t elements[2]; } uint512_t;
+
 #define UPPER_P(x) x->elements[0]
 #define LOWER_P(x) x->elements[1]
 #define UPPER(x) x.elements[0]
@@ -63,3 +65,5 @@ bool tostring128(uint128_t *number, uint32_t base, char *out,
                  uint32_t outLength);
 bool tostring256(uint256_t *number, uint32_t base, char *out,
                  uint32_t outLength);
+
+uint512_t trim256(uint512_t);

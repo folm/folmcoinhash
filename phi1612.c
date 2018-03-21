@@ -7,7 +7,7 @@
 #include "sha3/sph_fugue.h"
 #include "sha3/sph_gost.h"
 #include "sha3/sph_echo.h"
-#include "uint256.h"
+
 
 #include <stdlib.h>
 #include <stdint.h>
@@ -15,7 +15,7 @@
 #include <stdio.h>
 
 
-void phi1612_hash(const char* input, char* output)
+uint512_t phi1612_hash(const char* input, char* output)
 {
     sph_skein512_context     ctx_skein;
     sph_jh512_context ctx_jh;
@@ -24,7 +24,7 @@ void phi1612_hash(const char* input, char* output)
     sph_gost512_context      ctx_gost;
     sph_echo512_context ctx_echo;
 
-    uint32_t hash[17];
+    uint512_t hash[17];
 
     sph_skein512_init(&ctx_skein);
     sph_skein512 (&ctx_skein, input,64);
@@ -50,6 +50,6 @@ void phi1612_hash(const char* input, char* output)
     sph_echo512 (&ctx_echo, &hash[4], 64);
     sph_echo512_close(&ctx_echo, &hash[5]);
 
-    memcpy(output, &hash[5], 64);
+    return trim256(hash[5]);
 }
 
