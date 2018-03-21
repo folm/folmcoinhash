@@ -4,9 +4,9 @@
   "description": "Node.js hash functions for Folmcoin",
   "main": "folmcoinhash",
   "license": "MIT",
-  "repository" : { 
-    "type" : "git", 
-    "url" : "https://github.com/folm/folmcoinhash.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/folm/folmcoinhash.git"
   },
   "dependencies": {
     "nan": "latest",
