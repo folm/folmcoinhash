@@ -149,7 +149,7 @@ void sph_keccak224_close(void *cc, void *dst);
  * @param dst   the destination buffer
  */
 void sph_keccak224_addbits_and_close(
-		void *cc, unsigned ub, unsigned n, void *dst);
+	void *cc, unsigned ub, unsigned n, void *dst);
 
 /**
  * Initialize a Keccak-256 context. This process performs no memory allocation.
@@ -194,7 +194,7 @@ void sph_keccak256_close(void *cc, void *dst);
  * @param dst   the destination buffer
  */
 void sph_keccak256_addbits_and_close(
-		void *cc, unsigned ub, unsigned n, void *dst);
+	void *cc, unsigned ub, unsigned n, void *dst);
 
 /**
  * Initialize a Keccak-384 context. This process performs no memory allocation.
@@ -239,7 +239,7 @@ void sph_keccak384_close(void *cc, void *dst);
  * @param dst   the destination buffer
  */
 void sph_keccak384_addbits_and_close(
-		void *cc, unsigned ub, unsigned n, void *dst);
+	void *cc, unsigned ub, unsigned n, void *dst);
 
 /**
  * Initialize a Keccak-512 context. This process performs no memory allocation.
@@ -284,7 +284,7 @@ void sph_keccak512_close(void *cc, void *dst);
  * @param dst   the destination buffer
  */
 void sph_keccak512_addbits_and_close(
-		void *cc, unsigned ub, unsigned n, void *dst);
+	void *cc, unsigned ub, unsigned n, void *dst);
 
 #ifdef __cplusplus
 }

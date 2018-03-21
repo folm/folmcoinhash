@@ -27,7 +27,7 @@ void Phi1612(const Nan::FunctionCallbackInfo<Value>& args) {
   char* input = node::Buffer::Data(target);
   char* output = new char[32];
 
-  Phi1612(input, output);
+  phi1612_hash(input, output);
   
   args.GetReturnValue().Set(Nan::NewBuffer(output, 32).ToLocalChecked());
 }
